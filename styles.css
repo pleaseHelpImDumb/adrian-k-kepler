@@ -1,0 +1,18 @@
+body {
+  background: linear-gradient(to bottom,
+      #ffe0b2, #ffffcc, #e6ffe6, #ccddff, #e0b0ff, #ffdddd,#ffe0b2); /* Example muted rainbow */
+}
+
+body, h1, h2, h3, pre, code  {
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  width: 500px;
+}
+
+
