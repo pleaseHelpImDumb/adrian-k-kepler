@@ -1,0 +1,74 @@
+body {
+  background: linear-gradient(to bottom,
+      #ffe0b2, #ffffcc, #e6ffe6, #ccddff, #e0b0ff, #ffdddd,#ffe0b2);
+}
+
+body, h1, h2, h3, pre, code  {
+  font-family:"Comic Neue", cursive;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: rgb(0, 0, 0);
+  font-size: 50px; 
+  text-shadow: 3px 3px 5px #0000007e;
+}
+
+h2 {
+  font-size:40px;
+}
+
+h3 { 
+  font-size: 30px;
+}
+
+section {
+  padding: 30px;
+}
+
+#About p {
+  line-height: 50px;
+}
+
+p {
+  font-size:20px;
+  width: 1000px;
+  padding:10px;
+  margin: 10px;
+
+}
+
+#guitar{
+  text-align: center;
+}
+
+#about {
+  border-style: groove;
+}
+
+ul {
+  font-size:20px;
+}
+
+#Experience ul {
+  border-style: groove;
+  border-color: #000000;
+  line-height:50px;
+}
+
+#innerList ul {
+  border-style: none;
+
+}
+
+#Connect ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
