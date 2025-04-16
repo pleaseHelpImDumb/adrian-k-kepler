@@ -12,9 +12,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="navbar">
+        <nav>
+            [
+            <a href="#About">About</a> - 
+            <a href="#Experience">Experience</a> -
+            <a href="#Connect">Connect</a> -
+            <a href="#Skills">Skills</a> -
+            <a href="#Projects">Projects</a> -
+            ]
+        </nav>
+    </div>
     <h1>Adrian Konarski's Portfolio</h1>
-
-    <img src="./images/notAjoke.png" alt="Just a joke!" width="200">
+    
+    <img id="headerImage" src="./images/notAjoke.png" alt="Just a joke!" width="200">
 
     <section id="About">
         <h2>About</h2>
@@ -28,39 +39,105 @@
     </section>
 
     <section id="Experience">
-        <h2>Experience</h2>
+        <h2>Experience:</h2>
         <ul id="outerList">
-            <li><strong>Currently:</strong> Senior studying C.I.S. at SUNY Old Westbury</li>
-            <li>Language Experience:
-                <ul id="innerList">
-                    <li>Java</li>
-                    <li>Python</li>
-                    <li>C</li>
-                    <li>JavaScript</li>
-                </ul>
+            <li id="listTitle"><h4>Education:</h4></li>
+            <li id="education">
+                <div id="job-desc">
+                    <p>SUNY Old Westbury</p>
+                    <p>2024 - current</p>
+                </div>
+                <div id="job-desc">
+                    <p>Nassau Community College</p>
+                    <p>2018 - 2020</p>
+                </div>
             </li>
-            <li>Technology Proficiences:
-                <ul id="innerList">
-                    <li>Experienced with:
-                        <ul>
-                            <li>Windows/Linux</li>
-                            <li>Google Cloud Platform (GCP) AI API</li>
-                        </ul>
-                    </li>
-                    <li>Familiar with:
-                        <ul>
-                            <li>MySQL</li>
-                            <li>Git</li>
-                        </ul>
-                    </li>
-                    </li>
-                </ul>
-            <li>Personal ML/AI Interests:
-                <ul>
-                    <li>Exploring local LLMs</li>
-                    <li>Experience with image generation tools like ComfyUI</li>
-                    <li>LoRA model creation</li>
-                </ul>
+            <li id="listTitle"><h4>Skills:</h4></li>
+            <li id="techSkills">
+                <div id="languageList">
+                    <p><h4>Languages:</h4></p>
+                    <div id="skill-desc">
+                        <p>Java</p>
+                        <p>Proficient</p>
+                    </div>
+                    <div id="skill-desc">
+                        <p>Python</p>
+                        <p>Intermediate</p>
+                    </div>
+                    <div id="skill-desc">
+                        <p>C</p>
+                        <p>Intermediate</p>
+                    </div>
+                    <div id="skill-desc">
+                        <p>JavaScript</p>
+                        <p>Beginner</p>
+                    </div>
+                    <div id="skill-desc">
+                        <p>HTML</p>
+                        <p>Beginner</p>
+                    </div>
+                </div>
+                
+                <div id="generalList">
+                    <p><h4>General:</h4></p>
+                    <div id="skill-desc">
+                        <p>Windows</p>
+                        <p>Expert</p>
+                    </div>
+                    <div id="skill-desc">
+                        <p>Linux</p>
+                        <p>Proficicent</p>
+                    </div>
+                    <div id="skill-desc">
+                        <p>SQL</p>
+                        <p>Intermediate</p>
+                    </div>
+                    <div id="skill-desc">
+                        <p>Git</p>
+                        <p>Beginner</p>
+                    </div>
+            
+            </li>
+            <li id="listTitle"><h4 id="inner">Personal:</h4></li>
+            <li id="personalSkills">
+                <div id="languageList">
+                    <p><h4>Languages:</h4></p>
+                    <div id="skill-desc">
+                        <p>English</p>
+                        <p>Fluent</p>
+                    </div>
+                    <div id="skill-desc">
+                        <p>Polish</p>
+                        <p>Conversational</p>
+                    </div>
+                    <div id="skill-desc">
+                        <p>Spanish</p>
+                        <p>Basic</p>
+                    </div>
+                    <div id="skill-desc">
+                        <p>Italian</p>
+                        <p>Basic</p>
+                    </div>
+                    <div id="skill-desc">
+                        <p>Japanese</p>
+                        <p>Basic</p>
+                    </div>
+                </div>
+                <div id="generalList">
+                    <p><h4>General Hobbies:</h4></p>
+                    <div id="skill-desc">
+                        <p>Guitar playing and music transcription</p>
+                        <p>Proficient</p>
+                    </div>
+                    <div id="skill-desc">
+                        <p>Exploring generative image techniques and workflows</p>
+                        <p>Intermediate</p>
+                    </div>
+                    <div id="skill-desc">
+                        <p>Expanding knowledge of agentic LLMs and their integrations</p>
+                        <p>Intermediate</p>
+                    </div>
+                </div>
             </li>
         </ul> 
     </section>
@@ -72,15 +149,28 @@
                 <image src="./images/socialMediaIcons/github.png" alt="GitHub Profile" width="50px">
             </a></li>
             <li><a href="https://www.linkedin.com/in/adrian-kon" target="_blank" rel="noopener noreferrer">
-                <image src="./images/socialMediaIcons/linkedin.png" alt="GitHub Profile" width="50px">
+                <image src="./images/socialMediaIcons/linkedin.png" alt="LinkedIn Profile" width="50px">
             </a></li><li><a href="https://www.youtube.com/channel/UCadc39llVr-HeaB4jZagbaQ" target="_blank" rel="noopener noreferrer">
-                <image src="./images/socialMediaIcons/youtube.png" alt="GitHub Profile" width="50px">
+                <image src="./images/socialMediaIcons/youtube.png" alt="YouTube Profile" width="50px">
             </a></li>
         </ul>
     </section>
+
+    <section id="Skills">
+        <h2>Skills</h2>
+    </section>
+    
+    <section id="Projects">
+        <h2>Projects</h2>
+        <ul></ul>
+    </section>
+
     <p id="guitar">Besides technology, guitar is one of my hobbies too!</p>
     <iframe width="480" height="270" src="https://www.youtube.com/embed/5nTFp81yd-A" 
     title="Texas!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <br>
     <image src="./images/underConstruction.gif" width="300" height="150"></image>
+
+    
 </body>
 </html>
