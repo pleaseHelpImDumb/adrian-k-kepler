@@ -1,9 +1,10 @@
 body {
   background: linear-gradient(to bottom,
       #ffe0b2, #ffffcc, #e6ffe6, #ccddff, #e0b0ff, #ffdddd,#ffe0b2);
+  margin-top: 0px;
 }
 
-body, h1, h2, h3, pre, code  {
+body, h1, h2, h3, pre, code {
   font-family:"Comic Neue", cursive;
   display:flex;
   flex-direction: column;
@@ -25,20 +26,43 @@ h3 {
   font-size: 30px;
 }
 
+h4{
+  margin: 0px;
+  padding: 0px;
+}
+
 section {
   padding: 30px;
 }
 
 #About p {
   line-height: 50px;
+  width: 1000px;
+}
+
+#job-desc, #skill-desc {
+  display: flex;
+  flex-direction: row;
+}
+
+#languageList, #generalList {
+  display:flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+#languageList p, #generalList p, #job-desc p{
+  margin: 10px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  margin-top: 0px;
+  padding-top: 0px;
+  width:300px;
 }
 
 p {
   font-size:20px;
-  width: 1000px;
   padding:10px;
   margin: 10px;
-
 }
 
 #guitar{
@@ -59,9 +83,8 @@ ul {
   line-height:50px;
 }
 
-#innerList ul {
-  border-style: none;
-
+#outerList {
+list-style-type: none;
 }
 
 #Connect ul {
@@ -72,3 +95,29 @@ ul {
   flex-direction: row;
   gap: 20px;
 }
+
+.navbar a:hover {
+  mix-blend-mode:hard-light;
+  background-color: #00000059;
+}
+
+.navbar {
+  box-shadow: 0px 0px 20px rgb(0, 0, 0);
+  backdrop-filter: blur(10px);
+  background-color: transparent;
+  margin-top: 0px;
+  padding-top: 0px;
+  position: sticky;
+  top:0px;
+  z-index: 100;
+  font-size: 20px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  line-height: 50px;
+}
+
+#headerImage {
+  padding:20px;
+}
+
