@@ -43,7 +43,6 @@ for(let i = 0; i < skills.length; i++){
 //Add language headaer
 const langHeader = document.createElement("h4");
 langHeader.innerHTML = "Languages";
-langHeader.id = ""
 skillsList.appendChild(langHeader);
 //Add languages
 for(let i = 0; i < languages.length; i++){
