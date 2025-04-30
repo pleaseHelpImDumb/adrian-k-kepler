@@ -52,7 +52,6 @@ for(let i = 0; i < languages.length; i++){
     skillDiv.style.display = "flex"
     const listItem = document.createElement("p");
     const listItemProf = document.createElement("p");
-    listItem.id = ""
     listItem.innerHTML = languages[i];
     listItemProf.innerHTML = languagesProf[i];
     skillDiv.appendChild(listItem);
