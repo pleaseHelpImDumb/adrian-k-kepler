@@ -64,6 +64,7 @@ section {
   display: flex;
   flex-direction: row;
   justify-content:space-between;
+  min-width: 350px;
 }
 
 #languageList, #generalList {
@@ -71,22 +72,11 @@ section {
   flex-direction: column;
   margin-left: 1rem;
 }
-#languageList p, #generalList p, #job-desc p{
-  margin: 10px;
-  margin-bottom: 0px;
-  padding-bottom: 0px;
-  margin-top: 0px;
-  padding-top: 0px;
-}
-
-#guitar{
-  text-align: center;
-}
 
 #about {
   border-style: groove;
+  border-color: #000000;
 }
-
 
 #outerList {
   list-style-type: none;
@@ -122,11 +112,8 @@ section {
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   line-height: 50px;
-}
-.video{
-  width: 480px;
-  height: 270px;
 }
 
 .connectGrid {
@@ -136,12 +123,10 @@ section {
   gap: 50px;
   text-align: center;
 }
-
-.vidGrid{
-  display:grid;
-  text-align:center;
-  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-  gap: 20px;
+.copyright{
+  font-size: 0.8rem;
+  color: #5a5a5a;
+  text-align: center;
 }
 
 /* Tablet Media Query */
@@ -151,9 +136,6 @@ section {
   }
   p{
     line-height:25px;
-  }
-  #outerList {
-    padding-left: 20px;
   }
   #outerList {
     padding-left: 10px;
@@ -170,11 +152,6 @@ section {
     padding: 20px;
     border: dashed;
     border-color: rgb(134, 0, 74);
-  }
-  .vidGrid iframe{
-    width:100%;
-    height:fit-content;
-    justify-self: center;
   }
 }
 
@@ -202,11 +179,6 @@ section {
     border-style:dotted;
     border-color: rgb(255, 0, 140);
   }
-  .vidGrid {
-    grid-template: repeat(4, 1fr) / repeat(1, 1fr);
-    gap: 10px;
-  }
-
   .navbar {
     font-size: 0.95rem;
   }
