@@ -1,0 +1,135 @@
+html {
+  font-size: 20px;
+}
+
+body {
+  background: linear-gradient(to bottom,
+      #ffe0b2, #ffffcc, #e6ffe6, #ccddff, #e0b0ff, #ffdddd,#ffe0b2);
+  margin-top: 0px;
+}
+
+body {
+  font-family:"Comic Neue", cursive;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: rgb(0, 0, 0);
+  font-size: 2.5rem;
+  text-shadow: 3px 3px 5px #0000007e;
+  text-align:center;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 { 
+  font-size: 1.5rem;
+}
+
+h4{
+  font-size: 1rem;
+}
+
+p{
+  max-width: 600px;
+}
+
+#Guitar, #AI {
+  min-width: 200px;
+  text-align: center;
+}
+
+.navbar a:hover {
+  mix-blend-mode:hard-light;
+  background-color: #00000059;
+}
+.navbar {
+  box-shadow: 0px 0px 20px rgb(0, 0, 0);
+  backdrop-filter: blur(10px);
+  background-color: transparent;
+  margin-top: 0px;
+  padding-top: 0px;
+  position: sticky;
+  top:0px;
+  z-index: 100;
+  font-size: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 50px;
+}
+
+#gtArtistVids {
+  width:80%;
+  display: grid;
+  grid-template: 1fr 1fr 1fr / 1fr 2fr;
+  gap: 20px;
+  text-align: center;
+  align-items: center;
+}
+
+.video{
+  width:480px;
+  height:270px;
+  justify-self: center;
+}
+
+.vidGrid{
+  display:grid;
+  text-align:center;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  gap: 20px;
+}
+
+.copyright{
+  font-size: 0.8rem;
+  color: #5a5a5a;
+  text-align: center;
+}
+
+/* Tablet Media Query */
+@media(max-width: 1000px){
+  html{
+    font-size:17px;
+  }
+  p{
+    line-height:25px;
+  }
+
+  .video{
+    width: 80%;
+  }
+
+  #gtArtistVids{
+    width: 80vw;
+  display: grid;
+  grid-template: repeat(1, 2fr) / repeat(1, 2fr);
+  gap: 10px;
+  text-align: center;
+  align-items: center;
+  }
+}
+
+/* Phone Media Query */
+@media(max-width: 550px){
+  html{
+    font-size: 15px;
+  }
+  p {
+    line-height: 20px;
+  }
+  .vidGrid {
+    grid-template: repeat(4, 1fr) / repeat(1, 1fr);
+    gap: 10px;
+  }
+
+  .navbar {
+    font-size: 0.95rem;
+  }
+}
