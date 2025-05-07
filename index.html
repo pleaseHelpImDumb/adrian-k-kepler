@@ -19,7 +19,8 @@
             <a href="#Experience">Experience</a> -
             <a href="#Connect">Connect</a> -
             <a href="#Skills">Skills</a> -
-            <a href="#Projects">Projects</a>
+            <a href="#Projects">Projects</a> -
+            <a href="#MessagesInput">Messages</a>
             ]
         </nav>
     </div>
@@ -82,8 +83,30 @@
         </div>
     </section>
     <a href="personal.html" style="font-size: 2rem;"> Personal Hobbies</a>
+    
+    <section id="MessagesInput">
+        <h2>Leave a message</h2>
+        <form name="leave_message">
+            <div class="form-group"><label for="usersName">Name</label>
+                <input type="text" name="usersName" required>
+            </div>
+            <div class="form-group">
+                <label for="usersEmail">Email</label>
+                <input type="email" name="usersEmail" required>
+            </div>
+            <div class="form-group">
+                <label for="usersMessage">Message</label>
+                <textarea name="usersMessage" maxlength="300"></textarea>
+            </div>
+            <button class="submit-button" type="submit">Submit</button>
+        </form>
+    </section>
+    <section id="Messages">
+        <h2 id="msgHeader"></h2>
+        <ul id="messageList"></ul>
+    </section>
+    
     <image src="./images/underConstruction.gif" width="300" height="150"></image>
-
     <script src="./js/index.js"></script>
 </body>
 </html>
