@@ -1,23 +1,23 @@
-const body = document.querySelector("body");
-
-//Add footer
-const footer = document.createElement("footer");
-body.appendChild(footer);
-
-//Copyright Text
-const today = new Date();
-const thisYear = today.getFullYear()
-const copyrightParagraph = document.createElement("p");
-copyrightParagraph.innerHTML = `© ${thisYear} Adrian Konarski`;
-copyrightParagraph.classList.add("copyright");
-copyrightParagraph.setAttribute("copyright","highlight");
-footer.appendChild(copyrightParagraph);
-
 //Skills
-const skills = ["Java", "Python", "C", "JavaScript", "HTML", "SQL", "Git"];
-const skillsProf = ["Proficient", "Intermediate", "Beginner", "Beginner", "Beginner", "Beginner", "Beginner"]
-const languages = ["English", "Polish", "Spanish", "Japanese", "Italian"];
-const languagesProf = ["Fluent", "Conversational", "Basic", "Basic", "Basic"];
+
+const skills = [
+    { skill: "Java", proficiency: "Proficient" },
+    { skill: "Python", proficiency: "Intermediate" },
+    { skill: "C", proficiency: "Beginner" },
+    { skill: "JavaScript", proficiency: "Beginner" },
+    { skill: "HTML", proficiency: "Beginner" },
+    { skill: "SQL", proficiency: "Beginner" },
+    { skill: "Git", proficiency: "Beginner" }
+]
+
+const languages = [
+    { lang: "English", proficiency: "Fluent" },
+    { lang: "Polish", proficiency: "Conversational" },
+    { lang: "Spanish", proficiency: "Basic" },
+    { lang: "Japanese", proficiency: "Basic" },
+    { lang: "GItalianit", proficiency: "Basic" }
+]
+
 //Skills List
 const skillsSection = document.querySelector("#Skills");
 const skillsList = skillsSection.querySelector("ul");
@@ -34,8 +34,8 @@ for(let i = 0; i < skills.length; i++){
     skillDiv.style.display = "flex"
     const listItem = document.createElement("p");
     const listItemProf = document.createElement("p");
-    listItem.innerHTML = skills[i];
-    listItemProf.innerHTML = skillsProf[i];
+    listItem.innerHTML = skills[i].skill;
+    listItemProf.innerHTML = skills[i].proficiency;
     skillDiv.appendChild(listItem);
     skillDiv.appendChild(listItemProf);
     skillsList.appendChild(skillDiv);
@@ -51,8 +51,8 @@ for(let i = 0; i < languages.length; i++){
     skillDiv.style.display = "flex"
     const listItem = document.createElement("p");
     const listItemProf = document.createElement("p");
-    listItem.innerHTML = languages[i];
-    listItemProf.innerHTML = languagesProf[i];
+    listItem.innerHTML = languages[i].lang;
+    listItemProf.innerHTML = languages[i].proficiency;
     skillDiv.appendChild(listItem);
     skillDiv.appendChild(listItemProf);
     skillsList.appendChild(skillDiv);
