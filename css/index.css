@@ -55,12 +55,17 @@ section {
   padding: 30px;
 }
 
+textarea {
+  max-width: 600px;
+  max-height: 300px;
+}
+
 #About p {
   line-height: 50px;
   max-width: 600px;
 }
 
-#job-desc, #skill-desc {
+.job-desc, .skill-desc {
   display: flex;
   flex-direction: row;
   justify-content:space-between;
@@ -123,6 +128,85 @@ section {
   gap: 50px;
   text-align: center;
 }
+
+form {
+  text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: calc(100% - 12px);
+    padding: 10px;
+    border: 5px solid #7ba7ff;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+dialog {
+  textarea {
+    resize: vertical;
+    max-height:300px;
+  }
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+    max-height: 500px;
+}
+
+.submit-button {
+  background-color: #7ba7ff; 
+  color: #ffffff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease; 
+}
+
+.submit-button:hover {
+  background-color: #007bff; 
+}
+
+#messageList {
+  padding-left: 0px;
+}
+
+#messageList li {
+  border-style: solid;
+  border-color: #7ba7ff;
+  list-style: none;
+  padding-left: 0px;
+  padding: 10px;
+  max-width:600px;
+  border: 5px solid #7ba7ff;
+  border-radius: 4px;
+}
+
+.msg {
+  display:inline-block;
+  max-width: 580px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  word-wrap: break-word;
+}
+
 .copyright{
   font-size: 0.8rem;
   color: #5a5a5a;
@@ -131,6 +215,14 @@ section {
 
 /* Tablet Media Query */
 @media(max-width: 1000px){
+  #Messages {
+    max-width: 80vw;
+  }
+  .msg {
+    display:inline-block;
+    max-width: 95%;
+  }
+  
   html{
     font-size:17px;
   }
