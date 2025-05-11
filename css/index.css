@@ -65,7 +65,7 @@ textarea {
   max-width: 600px;
 }
 
-#job-desc, #skill-desc {
+.job-desc, .skill-desc {
   display: flex;
   flex-direction: row;
   justify-content:space-between;
@@ -197,7 +197,7 @@ dialog {
   border-radius: 4px;
 }
 
-#msg {
+.msg {
   display:inline-block;
   max-width: 580px;
   padding-top: 20px;
@@ -218,7 +218,7 @@ dialog {
   #Messages {
     max-width: 80vw;
   }
-  #msg {
+  .msg {
     display:inline-block;
     max-width: 95%;
   }

@@ -87,16 +87,17 @@
     <section id="MessagesInput">
         <h2>Leave a message</h2>
         <form name="leave_message">
-            <div class="form-group"><label for="usersName">Name</label>
-                <input type="text" name="usersName" required>
+            <div class="form-group">
+                <label for="nameInput">Name</label>
+                <input type="text" id="nameInput" name="usersName" required>
             </div>
             <div class="form-group">
-                <label for="usersEmail">Email</label>
-                <input type="email" name="usersEmail" required>
+                <label for="emailInput">Email</label>
+                <input type="email" id="emailInput" name="usersEmail" required>
             </div>
             <div class="form-group">
-                <label for="usersMessage">Message</label>
-                <textarea name="usersMessage" maxlength="300"></textarea>
+                <label for="msgInput">Message</label>
+                <textarea name="usersMessage" id="msgInput" maxlength="300"></textarea>
             </div>
             <button class="submit-button" type="submit">Submit</button>
         </form>
@@ -108,7 +109,8 @@
     
     <image src="./images/underConstruction.gif" width="300" height="150"></image>
     
-    
+
+    <script src="./js/footer.js"></script>
     <script src="./js/index.js"></script>
 </body>
 </html>

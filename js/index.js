@@ -30,7 +30,7 @@ skillsList.appendChild(skillHeader);
 //Add general skills
 for(let i = 0; i < skills.length; i++){
     const skillDiv = document.createElement("div");
-    skillDiv.id = "skill-desc";
+    skillDiv.className = "skill-desc";
     skillDiv.style.display = "flex"
     const listItem = document.createElement("p");
     const listItemProf = document.createElement("p");
@@ -47,7 +47,7 @@ skillsList.appendChild(langHeader);
 //Add languages
 for(let i = 0; i < languages.length; i++){
     const skillDiv = document.createElement("div");
-    skillDiv.id = "skill-desc";
+    skillDiv.className = "skill-desc";
     skillDiv.style.display = "flex"
     const listItem = document.createElement("p");
     const listItemProf = document.createElement("p");
@@ -79,12 +79,13 @@ formMessage.addEventListener("submit", (event) => {
     //Message Content
     const msgContent = document.createElement("span");
     msgContent.innerHTML = userMsg;
-    msgContent.id = "msg";
+    msgContent.className = "msg";
 
     //Time content
     const currentTime = new Date();
     const msgTime = document.createElement("span");
-    msgTime.innerHTML = ` - ${currentTime.getMonth()+1}/${currentTime.getDate()}/${currentTime.getFullYear()} ${currentTime.getHours()}:${currentTime.getMinutes()}`;
+    const formatMins = String(currentTime.getMinutes()).padStart(2, "0");
+    msgTime.innerHTML = ` - ${currentTime.getMonth()+1}/${currentTime.getDate()}/${currentTime.getFullYear()} ${currentTime.getHours()}:${formatMins}`;
 
     //Remove button
     const removeButton = document.createElement("button");
@@ -112,6 +113,8 @@ formMessage.addEventListener("submit", (event) => {
     const newTextArea = document.createElement("textarea");
     const newTextAreaLabel = document.createElement("label");
     newTextAreaLabel.innerHTML = "Editting message:";
+    newTextArea.id = "editInput";
+    newTextAreaLabel.htmlFor = "editInput";
     newTextArea.value = msgContent.innerHTML;
     newTextArea.maxLength = "300";
     document.body.appendChild(inputNewMessageDialog);
