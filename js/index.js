@@ -1,5 +1,4 @@
 //Skills
-
 const skills = [
     { skill: "Java", proficiency: "Proficient" },
     { skill: "Python", proficiency: "Intermediate" },
@@ -9,20 +8,18 @@ const skills = [
     { skill: "SQL", proficiency: "Beginner" },
     { skill: "Git", proficiency: "Beginner" }
 ]
-
 const languages = [
     { lang: "English", proficiency: "Fluent" },
     { lang: "Polish", proficiency: "Conversational" },
     { lang: "Spanish", proficiency: "Basic" },
     { lang: "Japanese", proficiency: "Basic" },
-    { lang: "GItalianit", proficiency: "Basic" }
+    { lang: "Italian", proficiency: "Basic" }
 ]
 
 //Skills List
 const skillsSection = document.querySelector("#Skills");
 const skillsList = skillsSection.querySelector("ul");
 skillsList.id = "outerList";
-
 //Add inner skill header
 const skillHeader = document.createElement("h4");
 skillHeader.innerHTML = "General";
@@ -153,3 +150,62 @@ formMessage.addEventListener("submit", (event) => {
     //Reset form
     event.target.reset();
 });
+
+
+//GITHUB Projects Fetch
+const projSection = document.querySelector("#Projects");
+const projList = projSection.querySelector("ul");
+projList.id = "outerList";
+projList.style = "padding-right: 30px";
+
+fetch('https://api.github.com/users/pleaseHelpimDumb/repos')
+    .then(res => {
+        if(!res.ok){
+            throw new Error ("Bad Request");
+        }
+        return res.json();
+    })
+    .then(data => {
+        data.forEach(repo => {
+            console.log(repo);
+            const newRepoItem = document.createElement("li");
+            const projLink = document.createElement("a");
+            const projectDesc = document.createElement("p");
+            
+            projLink.href = repo.html_url;
+            projLink.innerHTML = repo.name;
+            newRepoItem.append(projLink);
+            
+            projectDesc.innerHTML = repo.description;
+            newRepoItem.append(projectDesc);
+
+            newRepoItem.className = ("repoItem");
+            projList.appendChild(newRepoItem);
+        })
+    })
+    .catch (error => {
+        console.error(error);
+    });
+
+/* Async/Await way
+async function fetchData(){
+    try{
+        const response = await fetch('https://api.github.com/users/pleaseHelpimDumb/repos');
+
+        if(!response.ok){
+            throw new Error ("Request failed");
+        }
+
+        const data = await response.json();
+        return data;
+    } catch (error){
+        console.error(error);
+    }
+}
+async function processData(){
+    const repos = await fetchData()
+    console.log(repos);
+    //Do stuff with repo
+}
+processData();
+*/
